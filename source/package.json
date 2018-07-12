@@ -1,0 +1,14 @@
+{
+  "name": "flourish-of-approval.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "author": "",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-sass": "^3.0.1",
+    "jit-grunt": "^0.10.0",
+    "load-grunt-config": "^0.19.2",
+    "node-sass": "^4.9.2"
+  }
+}

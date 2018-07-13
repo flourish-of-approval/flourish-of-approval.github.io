@@ -1,0 +1,19 @@
+a.button {
+    display: inline-block;
+    background: $base;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+
+    &:hover {
+        background: $accent1;
+    }
+
+    &:focus {
+        outline-offset: -4px;
+    }
+}
+
+.button--lang {
+    width: 100%;
+}

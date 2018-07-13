@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{%- assign pages=site.pages | where:"ref", "index" | sort: 'lang' -%}
+{%- for page in pages -%}
+  <section lang="{{ page.lang }}" class="section--lang">
+    <p>{{ site.data[page.lang].lang.description }}</p>
+    <a class="button button--lang" href="{{ page.url }}">{{ site.data[page.lang].lang.button | default: page.lang }}</a>
+  </section>
+{%- endfor -%}

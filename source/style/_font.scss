@@ -1,0 +1,21 @@
+$fontpath: '/font/';
+
+@font-face {
+  font-family: 'krul';
+  src:
+    url($fontpath + 'krul.ttf') format('truetype'),
+    url($fontpath + 'krul.woff') format('woff'),
+    url($fontpath + 'krul.svg#krul') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'krul';
+  src:
+    url($fontpath + 'krul.ttf') format('truetype'),
+    url($fontpath + 'krul.woff') format('woff'),
+    url($fontpath + 'krul.svg#krul') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}

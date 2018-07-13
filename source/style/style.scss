@@ -1,29 +1,13 @@
-@font-face {
-  font-family: 'krul';
-  src:
-    url('krul.ttf') format('truetype'),
-    url('krul.woff') format('woff'),
-    url('krul.svg#krul') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'krul';
-  src:
-    url('krul.ttf') format('truetype'),
-    url('krul.woff') format('woff'),
-    url('krul.svg#krul') format('svg');
-  font-weight: normal;
-  font-style: italic;
-}
+@import "font";
+@import "theme";
 
 html {
   font-size: 18px;
   font-family: krul, Open Sans, sans-serif;
   margin: 0;
   padding: 0;
-  color: #141d10;
-  background: #f1f2ec;
+  color: $text;
+  background: $bg;
 }
 
 body {
@@ -37,7 +21,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  background: #3a5336;
+  background: $base;
 }
 
 nav ul {
@@ -73,7 +57,7 @@ h1, h2, th {
   font-family: krul, Libre Baskerville, serif;
   font-weight: normal;
   font-style: italic;
-  color: #3a5336;
+  color: $base;
   font-variant-ligatures: common-ligatures discretionary-ligatures;
 }
 
@@ -94,7 +78,7 @@ code {
   border-radius: 3px;
   padding: 1px 4px;
   font-size: 0.8em;
-  color: #c9549d;
+  color: $accent2;
   vertical-align: 2px;
 }
 
@@ -107,42 +91,52 @@ a {
   padding-bottom: 0.2em;
   text-decoration: none;
   background-image: linear-gradient(to top, currentColor, currentColor 0.1em, transparent, 0.1em, transparent);
-}
 
-a:visited {
-  color: #7aa4a9;
-  text-decoration: none;
-}
+  &:visited {
+    color: $accent1;
+    text-decoration: none;
+  }
 
-a:link,
-a:hover {
-  color: #3a5336;
-  text-decoration: none;
-}
+  &:link,
+  &:hover {
+    color: $base;
+    text-decoration: none;
+  }
 
-a:active,
-a:focus {
-  color: #c9549d;
-  text-decoration: none;
-  outline-offset: 2px;
-}
+  &:active,
+  &:focus {
+    color: $accent2;
+    text-decoration: none;
+    outline-offset: 2px;
+  }
 
-a:focus {
-  outline: 2px solid currentColor;
+  &:focus {
+    outline: 2px solid currentColor;
+  }
 }
 
 blockquote {
-  border-left: 0.5rem solid #7aa4a9;
-  border-right: 0.125rem solid #7aa4a9;
+  border: {
+	left: 0.5rem solid $accent1;
+  	right: 0.125rem solid $accent1;
+  }
+
   background: rgba(122, 164, 169, 0.25);
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-left: 2em;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  padding-right: 0.5em;
+
+  margin: {
+	left: 0;
+  	right: 0;
+  	top: 1em;
+  	bottom: 1em;
+  }
+
+  padding: {
+	left: 2em;
+  	top: 0.25em;
+  	bottom: 0.25em;
+  	right: 0.5em;
+  }
+
   font-style: italic;
 }
 
@@ -156,27 +150,4 @@ cite::before {
   content: "— ";
 }
 
-table {
-  width: 100%;
-  table-layout: fixed;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-th, td {
-  text-align: start;
-  text-align: left;
-  padding: 0.5em;
-}
-
-thead td,
-thead th {
-  border-bottom: 1px solid #141d10;
-}
-
-.even tr:nth-child(even) th,
-.even tr:nth-child(even) td,
-.odd tr:nth-child(odd) th,
-.odd tr:nth-child(odd) td {
-  background: white;
-}
+@import "table";

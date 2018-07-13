@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+  table-layout: fixed;
+
+  border: {
+	spacing: 0;
+  	collapse: collapse;
+  }
+}
+
+th, td {
+  text-align: start;
+  text-align: left;
+  padding: 0.5em;
+}
+
+thead td,
+thead th {
+  border-bottom: 1px solid #141d10;
+}
+
+.even tr:nth-child(even) th,
+.even tr:nth-child(even) td,
+.odd tr:nth-child(odd) th,
+.odd tr:nth-child(odd) td {
+  background: white;
+}

@@ -3,8 +3,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{- page.title }} - {{ site.data[page.lang].site.title -}}</title>
-  <meta name="theme-color" content="#3a5336">
   {% include seo.html %}
+  {% include favicon.html %}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i|Open+Sans:400,400i,700" rel="stylesheet"> 
   {%- assign pages = site.pages | where:"ref", page.ref | sort: 'lang' -%}

@@ -1,0 +1,25 @@
+<link rel="canonical" content="{{ site.url }}{{ page.url }}">
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.data[page.lang].site.description }}{% endif %}">
+
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:locale" content="{{ page.lang }}" />
+<meta property="og:type" content="website">
+
+<meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.data[page.lang].site.title }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/thumbs/{{ page.image }}" />
+<meta property="og:site_name" content="{{ site.data[page.lang].site.title }}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.data[page.lang].site.description }}{% endif %}">
+<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}">
+
+<meta name="twitter:card" content="summary_large_image" />
+
+<script type="application/ld+json">
+{
+    "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
+    "@type": "WebPage",
+    "url": "{{ site.url }}{{ page.url }}",
+    "headline": "{{ page.title }}",
+    "@context":"http://schema.org"
+}
+</script>

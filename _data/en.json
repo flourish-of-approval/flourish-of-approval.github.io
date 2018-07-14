@@ -1,4 +1,8 @@
 {
+    "site": {
+        "title": "Flourish of Approval",
+        "description": "The Dutch flourish of approval sign is not in unicode. We want to change that!"
+    },
     "lang": {
         "button": "Click here to go to the English index.",
         "description": "This site is available in English and Dutch."

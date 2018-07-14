@@ -6,12 +6,27 @@
 }
 
 html {
+  min-height: 100vh;
   font-size: 18px;
   font-family: krul, Open Sans, sans-serif;
   margin: 0;
   padding: 0;
   color: $text;
   background: $bg;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    background: $accent1;
+    mask: url(/krul.svg) bottom right / 10rem 10rem no-repeat;
+    display: block;
+    height: 10rem;
+    width: 10rem;
+    z-index: -2;
+    opacity: 0.5;
+  }
 }
 
 body {

@@ -20,69 +20,6 @@ body {
   padding: 0;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  
-  nav {
-    display: flex;
-    background: $base;
-  }
-
-  ul {
-  	padding: 0 0.5rem;
-    margin: 0;
-    display: flex;
-
-    &:first-child {
-      flex: 1 0 auto;
-    }
-  }
-
-  li {
-    padding: 0 0.25rem;
-    margin: 0;
-    display: block;
-  }
-  
-  a {
-    padding: 0.25rem 1rem;
-    display: block;
-  }
-  
-  a,
-  a:link,
-  a:visited {
-    color: white;
-  }
-  
-  a:focus {
-    outline-offset: -4px;
-  }
-
-  a:not(:hover) {
-    background: none;
-  }
-
-  li.active {
-    a,
-    a:link,
-    a:visited {
-      color: $base;
-      background: white;
-    }
-  }
-}
-
-.language-switcher
-{
-  @media (max-width: 24rem) {
-    display: none;
-  }
-}
-
 main {
   padding: 1rem;
   margin: auto;
@@ -168,39 +105,4 @@ a {
   }
 }
 
-blockquote {
-  border: {
-	left: 0.5rem solid $accent1;
-  	right: 0.125rem solid $accent1;
-  }
-
-  background: rgba(122, 164, 169, 0.25);
-
-  margin: {
-	left: 0;
-  	right: 0;
-  	top: 1em;
-  	bottom: 1em;
-  }
-
-  padding: {
-	left: 2em;
-  	top: 0.25em;
-  	bottom: 0.25em;
-  	right: 0.5em;
-  }
-
-  font-style: italic;
-}
-
-blockquote + cite {
-  display: block;
-  font-size: 0.8em;
-  margin-top: -0.5em;
-}
-
-cite::before {
-  content: "— ";
-}
-
-@import "table", "button";
+@import "nav", "quote", "table", "button";

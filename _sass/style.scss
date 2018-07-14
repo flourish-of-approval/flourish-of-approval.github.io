@@ -1,6 +1,10 @@
 @import "font";
 @import "theme";
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 18px;
   font-family: krul, Open Sans, sans-serif;
@@ -17,14 +21,14 @@ body {
 }
 
 header {
-  display: sticky;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  background: $base;
-
+  
   nav {
     display: flex;
+    background: $base;
   }
 
   ul {
@@ -72,12 +76,34 @@ header {
   }
 }
 
-main,
-section {
+.language-switcher
+{
+  @media (max-width: 24rem) {
+    display: none;
+  }
+}
+
+main {
   padding: 1rem;
   margin: auto;
   max-width: 48rem;
   display: block;
+}
+
+section {
+  padding: 1rem 0;
+  display: block;
+}
+
+footer {
+  padding: 1rem;
+  margin: 1rem auto 0;
+  max-width: 48rem;
+  display: block;
+  font-size: smaller;
+  border: {
+    top: 1px solid $accent1;
+  }
 }
 
 h1, h2, th {

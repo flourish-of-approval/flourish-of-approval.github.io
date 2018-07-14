@@ -4,7 +4,9 @@
         "description": "The Dutch flourish of approval sign is not in unicode. We want to change that!"
     },
     "lang": {
+        "name": "English",
         "button": "Click here to go to the English index.",
-        "description": "This site is available in English and Dutch."
+        "description": "This site is available in English and Dutch.",
+        "also_available": "Other languages: [0]"
     }
 }

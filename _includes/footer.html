@@ -1,0 +1,16 @@
+<footer>
+    {%- assign pages=site.pages | where: 'ref', page.ref | sort: 'lang' -%}
+    {%- assign langs = "" | split: "," -%}
+    {%- for p in pages -%}
+    {%- if p.lang != page.lang -%}
+    {%- capture link -%}
+        <a href="{{ p.url }}" class="{{ p.lang }}">{{ site.data[p.lang].lang.name }}</a>
+    {%- endcapture -%}
+    {%- assign link = link | split: "!@#" -%}
+    {%- assign langs = langs | concat: link -%}
+    {%- endif -%}
+    {%- endfor -%}
+    {% assign langs = langs | join: ", " %}
+   
+    <p>{{ site.data[page.lang].lang.also_available | replace: '[0]', langs }}</p>
+</footer>

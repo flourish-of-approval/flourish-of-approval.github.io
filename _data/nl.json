@@ -4,7 +4,9 @@
         "description": "De Nederlandse goedkeuringskrul is niet opgenomen in unicode, wij willen dat veranderen!"
     },
     "lang": {
+        "name": "Nederlands",
         "button": "Klik hier om naar de Nederlandse index te gaan.",
-        "description": "Deze website is beschikbaar in het Nederlands en in het Engels."
+        "description": "Deze website is beschikbaar in het Nederlands en in het Engels.",
+        "also_available": "Andere talen: [0]"
     }
 }

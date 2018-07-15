@@ -10,7 +10,9 @@
     {%- assign langs = langs | concat: link -%}
     {%- endif -%}
     {%- endfor -%}
+    {%- assign langcount = langs | size -%}
+    {%- if langcount > 0 -%}
     {% assign langs = langs | join: ", " %}
-   
     <p>{{ site.data[page.lang].lang.also_available | replace: '[0]', langs }}</p>
+    {%- endif -%}
 </footer>

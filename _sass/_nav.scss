@@ -67,18 +67,18 @@ header {
 		top: 0;
 		bottom: 0;
 		padding-top: 2rem;
-        background: $base;
-        box-shadow: inset -2rem 2.1rem 6px black;
+		background: $base;
+		box-shadow: inset -2rem 2.1rem 6px black;
 
 		ul {
 			flex-direction: column;
 			padding: 0.5rem 0;
 		}
-    }
-    
-    main {
-        padding-top: 3rem;
-    }
+	}
+
+	main {
+		padding-top: 3rem;
+	}
 
 	.menu-check {
 		display: block;
@@ -87,13 +87,18 @@ header {
 		position: absolute;
 		top: 0;
 		left: -9999px;
+
+		&:focus + .menu-toggle > label {
+            outline: 2px solid white;
+            outline-offset: -2px;
+		}
 	}
 
 	.menu-toggle {
 		background: $base;
-        display: block;
-        position: sticky;
-        z-index: 1;
+		display: block;
+		position: sticky;
+		z-index: 1;
 
 		label {
 			display: inline-block;
@@ -148,10 +153,10 @@ header {
 	}
 
 	.content {
-        position: absolute;
+		position: absolute;
 		transform: translate(0, 0);
-        transition: transform 0.5s ease-in-out;
-        box-shadow: 0 0 12px black;
+		transition: transform 0.5s ease-in-out;
+		box-shadow: 0 0 12px black;
 	}
 
 	.menu-check:checked ~ .content {

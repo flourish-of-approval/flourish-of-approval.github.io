@@ -1,7 +1,7 @@
 {%- assign page_paths = site.pages | where:"lang", page.lang | sort: "order", "last" | map: "path" -%}
-<input type="checkbox" class="menu-check" id="menu-check" />
+<input type="checkbox" class="menu-check" id="menu-check" aria-label="{{ site.data[page.lang].menu.show }}" />
 <div class="menu-toggle">
-  <label for="menu-check">
+  <label for="menu-check" title="{{ site.data[page.lang].menu.show }}">
     <span></span>
     <span></span>
     <span></span>

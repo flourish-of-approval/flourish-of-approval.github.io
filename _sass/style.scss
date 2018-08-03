@@ -1,132 +1,145 @@
 @import "font";
 @import "theme";
 
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 html {
-  min-height: 100vh;
-  font-size: 18px;
-  font-family: krul, Open Sans, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: $text;
-  background: $bg;
+	min-height: 100vh;
+	font-size: 18px;
+	font-family: krul, Open Sans, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: $text;
+	background: $bg;
 }
 
 body {
-  min-height: 100vh;
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
+	min-height: 100vh;
+	font-size: 1rem;
+	margin: 0;
+	padding: 0;
 }
 
 .content {
-  background: $bg;
-  top: 0;
-  bottom: 0;
-  left: 0; 
-  right: 0;
-  
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 1rem;
-    right: 0;
-    background: $accent1;
-    mask: url(/krul.svg) bottom right / 10rem 10rem no-repeat;
-    display: block;
-    height: 10rem;
-    width: 10rem;
-    z-index: -2;
-    opacity: 0.5;
-  }
+	background: $bg;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	@supports (mask-image: url()) or (-webkit-mask-image: url()) {
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 1rem;
+			right: 0;
+			background: $accent1;
+			-webkit-mask: url(/krul.svg) bottom right / 10rem 10rem no-repeat;
+			mask: url(/krul.svg) bottom right / 10rem 10rem no-repeat;
+			display: block;
+			height: 10rem;
+			width: 10rem;
+			z-index: -2;
+			opacity: 0.5;
+		}
+	}
 }
 
 main {
-  padding: 1rem;
-  margin: auto;
-  max-width: 48rem;
-  display: block;
+	padding: 1rem;
+	margin: auto;
+	max-width: 48rem;
+	display: block;
 }
 
 section {
-  padding: 1rem 0;
-  display: block;
+	padding: 1rem 0;
+	display: block;
 }
 
 footer {
-  padding: 1rem;
-  margin: 1rem auto 0;
-  max-width: 48rem;
-  display: block;
-  font-size: smaller;
-  border: {
-    top: 1px solid $accent1;
-  }
+	padding: 1rem;
+	margin: 1rem auto 0;
+	max-width: 48rem;
+	display: block;
+	font-size: smaller;
+	border: {
+		top: 1px solid $accent1;
+	}
 }
 
-h1, h2, th {
-  font-family: krul, Libre Baskerville, serif;
-  font-weight: normal;
-  font-style: italic;
-  color: $base;
-  font-variant-ligatures: common-ligatures discretionary-ligatures;
+h1,
+h2,
+th {
+	font-family: krul, Libre Baskerville, serif;
+	font-weight: normal;
+	font-style: italic;
+	color: $base;
+	font-variant-ligatures: common-ligatures discretionary-ligatures;
 }
 
 h1 {
-  font-size: 2rem;
-  margin: 1rem 0 1rem;
+	font-size: 2rem;
+	margin: 1rem 0 1rem;
 }
 
-h2{
-  font-size: 1.5rem;
-  margin: 2rem 0 1rem;
+h2 {
+	font-size: 1.5rem;
+	margin: 2rem 0 1rem;
 }
 
 code {
-  font-family: Consolas, monaco, Bitstream Vera Sans Mono, monospace;
-  border: 1px solid #aaa;
-  background: #eee;
-  border-radius: 3px;
-  padding: 1px 4px;
-  font-size: 0.8em;
-  color: $accent2;
-  vertical-align: 2px;
+	font-family: Consolas, monaco, Bitstream Vera Sans Mono, monospace;
+	border: 1px solid #aaa;
+	background: #eee;
+	border-radius: 3px;
+	padding: 1px 4px;
+	font-size: 0.8em;
+	color: $accent2;
+	vertical-align: 2px;
 }
 
 p {
-  margin: 1em 0.1em;
-  padding: 0;
+	margin: 1em 0.1em;
+	padding: 0;
 }
 
 a {
-  padding-bottom: 0.2em;
-  text-decoration: none;
-  background-image: linear-gradient(to top, currentColor, currentColor 0.1em, transparent, 0.1em, transparent);
+	padding-bottom: 0.2em;
+	text-decoration: none;
+	background-image: linear-gradient(
+		to top,
+		currentColor,
+		currentColor 0.1em,
+		transparent,
+		0.1em,
+		transparent
+	);
 
-  &:visited {
-    color: $accent1;
-    text-decoration: none;
-  }
+	&:visited {
+		color: $accent1;
+	}
 
-  &:link,
-  &:hover {
-    color: $base;
-    text-decoration: none;
-  }
+	&:link,
+	&:hover {
+		color: $base;
+		text-decoration: none;
+	}
 
-  &:active,
-  &:focus {
-    color: $accent2;
-    text-decoration: none;
-    outline-offset: 2px;
-  }
+	&:active,
+	&:focus {
+		color: $accent2;
+		text-decoration: none;
+		outline-offset: 2px;
+	}
 
-  &:focus {
-    outline: 2px solid currentColor;
-  }
+	&:focus {
+		outline: 2px solid currentColor;
+	}
 }
 
 @import "nav", "quote", "table", "button";

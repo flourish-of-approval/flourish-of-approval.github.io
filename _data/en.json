@@ -8,5 +8,8 @@
         "button": "Click here to go to the English index.",
         "description": "This site is available in English and Dutch.",
         "also_available": "Other languages: [0]"
+    },
+    "menu": {
+        "show": "Show menu"
     }
 }

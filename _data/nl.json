@@ -8,5 +8,8 @@
         "button": "Klik hier om naar de Nederlandse index te gaan.",
         "description": "Deze website is beschikbaar in het Nederlands en in het Engels.",
         "also_available": "Andere talen: [0]"
+    },
+    "menu": {
+        "show": "Menu laten zien"
     }
 }

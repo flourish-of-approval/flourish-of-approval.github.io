@@ -1,4 +1,12 @@
 {%- assign page_paths = site.pages | where:"lang", page.lang | sort: "order", "last" | map: "path" -%}
+<input type="checkbox" class="menu-check" id="menu-check" />
+<div class="menu-toggle">
+  <label for="menu-check">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+</div>
 <header>
   <nav>
     <ul>

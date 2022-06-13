@@ -6,4 +6,4 @@ permalink: /nl/voorstel/
 order: 10
 ---
 We zijn bezig met de eerste versie van het voorstel. Deze pagina wordt
-geüpdate zodra we meer details weten.
+geüpdatet zodra we meer details weten.
